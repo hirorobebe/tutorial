@@ -1,0 +1,15 @@
+#Control arm
+0.install dynamixel controller
+sudo apt-get install ros-<distro>-dynamixel-controllers
+cd ~/catkin_ws/src
+catkin_create_pkg my_dynamixel_tutorial dynamixel_controllers std_msgs rospy roscpp
+
+1.start(like roscore)
+roslaunch my_dynamixel_tutorial controller_manager.launch
+
+#Control arm
+1.
+roslaunch my_dynamixel_tutorial start_tilt_controller.launch
+
+2.
+rostopic pub -1 /tilt_controller/command std_msgs/Float64 -- 1.5
