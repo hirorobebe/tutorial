@@ -1,0 +1,4 @@
+roslaunch my_dynamixel_tutorial start_tilt_controller.launch
+
+rostopic pub -1 /tilt1_controller/command std_msgs/Float64  -- 0.5
+
